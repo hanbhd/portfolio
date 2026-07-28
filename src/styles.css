@@ -1,0 +1,116 @@
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--page-background);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  color-scheme: light;
+
+  --page-background: #eee5d8;
+  --header-background: #eee5d8;
+  --section-background: linear-gradient(122deg, #f0e6d9 0%, #e5dacb 54%, #d1c5b7 100%);
+  --hero-background: linear-gradient(122deg, #f3eadf 0%, #e8ddcf 52%, #d3c8bb 100%);
+  --card-background: #f7f1e8;
+
+  --surface-background: #f7f2eb;
+  --surface-hover: #fffaf3;
+  --mobile-nav-background: rgba(239, 235, 228, 0.98);
+
+  --primary-text: #1d1d1f;
+  --strong-text: #171819;
+  --body-text: #585b5d;
+  --muted-text: #4e5152;
+  --nav-text: #383a3e;
+  --dark-control-text: #292b2d;
+
+  --accent-text: #8a7754;
+  --accent-strong: #756548;
+
+  --tag-text: #6f6046;
+  --tag-background: rgba(138, 119, 84, 0.08);
+  --tag-border: rgba(138, 119, 84, 0.1);
+
+  --soft-card-background: rgba(255, 255, 255, 0.3);
+  --soft-card-hover: rgba(255, 255, 255, 0.48);
+
+  --project-button-background: rgba(255, 255, 255, 0.38);
+  --project-button-hover: rgba(255, 255, 255, 0.68);
+
+  --icon-color: #27292b;
+  --focus-color: rgba(60, 62, 64, 0.55);
+
+  --white-gold: linear-gradient(
+    110deg,
+    #716249 0%,
+    #8e7956 32%,
+    #ad9a70 50%,
+    #8b7552 70%,
+    #6c5e46 100%
+  );
+}
+
+body.dark-mode {
+  color-scheme: dark;
+
+  --page-background: #111315;
+  --header-background: #171a1d;
+  --section-background: #1b1f23;
+  --hero-background: #1b1f23;
+  --card-background: #343a40;
+
+  --surface-background: #252a2f;
+  --surface-hover: #30363c;
+  --mobile-nav-background: rgba(24, 28, 32, 0.98);
+
+  --primary-text: #f1f0ed;
+  --strong-text: #f7f5f1;
+  --body-text: #c9cbd0;
+  --muted-text: #b9bdc2;
+  --nav-text: #e5e7ea;
+  --dark-control-text: #f0f1f2;
+
+  --accent-text: #d6bd8d;
+  --accent-strong: #dbc69d;
+
+  --tag-text: #dcc69a;
+  --tag-background: rgba(214, 189, 141, 0.12);
+  --tag-border: rgba(214, 189, 141, 0.18);
+
+  --soft-card-background: rgba(255, 255, 255, 0.07);
+  --soft-card-hover: rgba(255, 255, 255, 0.12);
+
+  --project-button-background: rgba(255, 255, 255, 0.09);
+  --project-button-hover: rgba(255, 255, 255, 0.15);
+
+  --icon-color: #eceef0;
+  --focus-color: rgba(214, 189, 141, 0.72);
+
+  --white-gold: linear-gradient(
+    110deg,
+    #b99c68 0%,
+    #dbc28f 32%,
+    #f0dcae 50%,
+    #d2b77f 70%,
+    #a88b5c 100%
+  );
+}
+
+body {
+  color: var(--primary-text);
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}

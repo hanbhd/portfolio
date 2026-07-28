@@ -1,0 +1,64 @@
+<header class="site-header">
+  <a
+    href="#home"
+    class="brand"
+    (click)="scrollToSection('home'); $event.preventDefault()"
+  >
+    <span class="brand-mark">Meftun-Han</span>
+  </a>
+
+  <nav class="nav-links">
+    <a href="#about">Über mich</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projekte</a>
+  </nav>
+
+  <button
+    class="mobile-menu-button"
+    type="button"
+    (click)="toggleMobileMenu()"
+  >
+    <span>{{ mobileMenuOpen ? '×' : '☰' }}</span>
+  </button>
+
+  <div class="header-actions">
+
+    <a
+      class="github-button"
+      href="https://github.com/hanbhd"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="GitHub Profil öffnen"
+    >
+      <i class="devicon-github-original"></i>
+    </a>
+
+    <button
+      class="theme-toggle"
+      type="button"
+      title="Dark Mode wechseln"
+      (click)="toggleDarkMode()"
+    >
+      <span>{{ darkModeEnabled ? '☀' : '☾' }}</span>
+    </button>
+
+  </div>
+
+  <nav
+    class="mobile-nav"
+    [class.is-open]="mobileMenuOpen"
+  >
+    <a href="#about" (click)="closeMobileMenu()">Über mich</a>
+    <a href="#skills" (click)="closeMobileMenu()">Skills</a>
+    <a href="#projects" (click)="closeMobileMenu()">Projekte</a>
+
+    <a
+      href="https://github.com/hanbhd"
+      target="_blank"
+      rel="noopener noreferrer"
+      (click)="closeMobileMenu()"
+    >
+      <i class="devicon-github-original"></i>
+    </a>
+  </nav>
+</header>

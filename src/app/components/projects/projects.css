@@ -1,0 +1,231 @@
+:host {
+  display: block;
+}
+
+.projects-section {
+  position: relative;
+  min-height: 100svh;
+  padding: 118px max(28px, calc((100vw - 1180px) / 2)) 120px;
+  display: grid;
+  align-items: center;
+  background: var(--section-background);
+}
+
+.projects-inner {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  gap: 40px;
+}
+
+.projects-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.projects-title h2 {
+  margin: 0;
+  padding: 0.04em 0.08em 0.12em;
+  color: var(--accent-text);
+  font-family: var(--display-font);
+  font-size: clamp(48px, 5.6vw, 74px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0.045em;
+}
+
+.portfolio-project {
+  min-width: 0;
+  padding: 28px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  align-items: center;
+  gap: 48px;
+  background: var(--card-background);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.portfolio-project:hover {
+  box-shadow: 0 12px 26px rgba(113, 94, 62, 0.12);
+  transform: translateY(-3px);
+}
+
+.portfolio-project--reverse .project-image {
+  order: 2;
+}
+
+.project-image {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 14px 32px rgba(113, 94, 62, 0.14);
+}
+
+.project-details {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-name {
+  margin: 0 0 22px;
+  color: var(--accent-text);
+  font-family: var(--display-font);
+  font-size: clamp(28px, 2.7vw, 38px);
+  font-weight: 400;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+.project-details p {
+  margin: 0;
+  color: var(--body-text);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.project-footer {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 19px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--project-button-background);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    0 7px 20px rgba(113, 94, 62, 0.08);
+  color: var(--dark-control-text);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.project-link:hover {
+  background: var(--project-button-hover);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    0 12px 26px rgba(113, 94, 62, 0.14);
+  transform: translateY(-3px);
+}
+
+.project-link:focus-visible {
+  outline: 3px solid rgba(138, 119, 84, 0.35);
+  outline-offset: 3px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.project-tags span {
+  padding: 8px 13px;
+  border: 1px solid var(--tag-border);
+  border-radius: 999px;
+  background: var(--tag-background);
+  color: var(--tag-text);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.back-to-top {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  color: var(--icon-color);
+  text-decoration: none;
+  transform: translateX(-50%);
+  transition: transform 0.22s ease;
+}
+
+.back-to-top span {
+  font-size: 23px;
+  line-height: 1;
+}
+
+.back-to-top:hover {
+  transform: translate(-50%, -3px) scale(1.12);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .projects-section {
+    padding: 110px 24px 100px;
+  }
+
+  .portfolio-project {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .portfolio-project--reverse .project-image {
+    order: 0;
+  }
+
+  .project-details {
+    align-items: stretch;
+  }
+
+  .project-name {
+    text-align: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .projects-section {
+    padding: 100px 22px 92px;
+  }
+
+  .projects-title h2 {
+    font-size: clamp(42px, 14vw, 58px);
+  }
+
+  .portfolio-project {
+    padding: 20px;
+  }
+
+  .project-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-tags {
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+}

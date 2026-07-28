@@ -1,0 +1,14 @@
+:host {
+  --ink: var(--primary-text);
+  --display-font: 'Iowan Old Style', 'Baskerville', 'Times New Roman', serif;
+  display: block;
+  min-height: 100vh;
+  background: var(--page-background);
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+}
+
+main {
+  overflow: clip;
+}
+
